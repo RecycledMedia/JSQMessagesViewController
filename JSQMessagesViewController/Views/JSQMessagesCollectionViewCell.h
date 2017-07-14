@@ -64,8 +64,8 @@
 
 
 /**
- *  The `JSQMessagesCollectionViewCell` is an abstract base class that presents the content for 
- *  a single message data item when that item is within the collection view’s visible bounds. 
+ *  The `JSQMessagesCollectionViewCell` is an abstract base class that presents the content for
+ *  a single message data item when that item is within the collection view’s visible bounds.
  *  The layout and presentation of cells is managed by the collection view and its corresponding layout object.
  *
  *  @warning This class is intended to be subclassed. You should not use it directly.
@@ -106,7 +106,7 @@
 @property (weak, nonatomic, readonly) JSQMessagesCellTextView *textView;
 
 /**
- *  Returns the bubble image view of the cell that is responsible for displaying message bubble images. 
+ *  Returns the bubble image view of the cell that is responsible for displaying message bubble images.
  *
  *  @warning If mediaView returns a non-nil view, then this value will be `nil`.
  */
@@ -120,7 +120,7 @@
  *  To do so, override `collectionView:cellForItemAtIndexPath:`
  *
  *  @warning You should not try to manipulate any properties of this view, for example adjusting
- *  its frame, nor should you remove this view from the cell or remove any of its subviews. 
+ *  its frame, nor should you remove this view from the cell or remove any of its subviews.
  *  Doing so could result in unexpected behavior.
  */
 @property (weak, nonatomic, readonly) UIView *messageBubbleContainerView;
@@ -131,7 +131,7 @@
 @property (weak, nonatomic, readonly) UIImageView *avatarImageView;
 
 /**
- *  Returns the avatar container view of the cell. This view is the superview of 
+ *  Returns the avatar container view of the cell. This view is the superview of
  *  the cell's avatarImageView.
  *
  *  @discussion You may customize the cell by adding custom views to this container view.
@@ -156,12 +156,17 @@
  */
 @property (weak, nonatomic, readonly) UITapGestureRecognizer *tapGestureRecognizer;
 
+/**
+ *  Returns the warning image view of the cell.
+ */
+@property (weak, nonatomic, readonly) UIImageView *warningImageView;
+
 #pragma mark - Class methods
 
 /**
  *  Returns the `UINib` object initialized for the cell.
  *
- *  @return The initialized `UINib` object or `nil` if there were errors during 
+ *  @return The initialized `UINib` object or `nil` if there were errors during
  *  initialization or the nib file could not be located.
  */
 + (UINib *)nib;
